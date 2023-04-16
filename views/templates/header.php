@@ -16,38 +16,31 @@
 
 <body>
 <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-         <div class="container-fluid bg-dark pb-2">
-            <a class="navbar-brand" href="/controllers/homeCtrl.php">Rank Aram
+      <nav class="navbar navbar-dark navbar-expand-lg orbitron">
+         <div class="container-fluid p-2">
+            <a class="navbar-brand rankAramColor" href="/controllers/homeCtrl.php">Rank Aram
                <span class="visually-hidden">(current)</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon" ></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarColor02">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarColor02">
                <ul class="navbar-nav">
                   <li class="nav-item">
-                     <a class="nav-link" href="/controllers/prestationCtrl.php">Prestations</a>
+                     <a class="nav-link text-white" href="/controllers/ladderCtrl.php">Ladder</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="/controllers/coordonneeCtrl.php">Nous trouver</a>
+                     <a class="nav-link text-white" href="/controllers/tierListCtrl.php">Tier List</a>
                   </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="/controllers/contactCtrl.php">Contact</a>
-                  </li>
-                  <?php if (isset($_SESSION['user'])) { ?>
-                     <li class="nav-item">
-                        <a class="nav-link" href="/controllers/appointmentCtrl.php">Prendre rendez-vous</a>
-                     </li>
-                  <?php } ?>
+                  
                </ul>
                <?php if (isset($_SESSION['user'])) { ?>
                   <ul class="navbar-nav align-self-end me-5">
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mon compte</a>
                         <div class="dropdown-menu">
-                           <a class="dropdown-item text-dark" href="/controllers/profilUserCtrl.php">Mon profil</a>
-                           <a class="dropdown-item text-dark" href="/controllers/deconnexionCtrl.php">Deconnexion</a>
+                           <a class="dropdown-item" href="/controllers/profilUserCtrl.php">Profil</a>
+                           <a class="dropdown-item" href="/controllers/deconnexionCtrl.php">Deconnexion</a>
                            <?php if ($_SESSION['user']->role == 1) { ?>
                               <a class="dropdown-item text-dark" href="/controllers/admin/dashboardCtrl.php">Dashboard</a>
                         </div>
@@ -55,7 +48,7 @@
                   <?php }
                         } else { ?>
                   <li class="nav-item list-unstyled text-secondary me-5">
-                     <a class="nav-link text-decoration-none" href="/controllers/connexionCtrl.php">Connexion</a>
+                     <a class="nav-link text-decoration-none text-white" href="/controllers/connexionCtrl.php">Connexion</a>
                   </li>
                <?php } ?>
                   </ul>
