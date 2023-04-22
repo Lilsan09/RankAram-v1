@@ -1,8 +1,8 @@
 /* import police orbitron */
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
 @font-face {
-   font-family: 'Orbitron';
-   src: url('https://fonts.googleapis.com/css?family=Orbitron');
+   font-family: "Orbitron";
+   src: url("https://fonts.googleapis.com/css?family=Orbitron");
 }
 * {
    box-sizing: border-box;
@@ -11,7 +11,7 @@
    outline: none;
 }
 .orbitron {
-   font-family: 'Orbitron', sans-serif;
+   font-family: "Orbitron", sans-serif;
 }
 
 /* variable couleur */
@@ -24,77 +24,328 @@
    --grey-blue: rgba(50, 50, 68, 1);
    --rankAram-Color: rgb(143, 192, 251);
 }
+/* Global CSS */
 
-
-
-/* Navbar */
-.navbar {
-   background-color: var(--color-navbar);
-   color: white;
-   font-size: 1.2em;
-   font-weight: 600;
-   padding: 0.5em 0;
-   position: fixed!important;
-   top: 0;
-   /* height: 10vh; */
-   width: 100%;
-   z-index: 100;
-}
-.rankAramColor {
-   color: white!important;
-   -webkit-text-stroke: 0.1px var(--color-separate)
-}
-.color-white {
-   color: white;
-}
-/* menu burger */
-
-.bgGlobal {
-   background-image:url(/public/assets/img/bgMobil.png);
+.globalBg {
+   background: linear-gradient(
+         114.58deg,
+         #000000 -20.68%,
+         rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(0deg, rgba(26, 17, 47, 0.7), rgba(26, 17, 47, 0.7)),
+      url(/public/assets/img/rankAramBg.jpg);
    background-color: rgba(27, 21, 41, 1);
-   height: 100vh;
-   width: 100vw;
    background-size: cover;
    background-repeat: no-repeat;
 }
-.homeH1 {
-   font-size: 2em;
-   font-weight: 600;
-   text-align: center;
-   color: white;
+.windowBlur {
+   background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+   );
+   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+   backdrop-filter: blur(5px);
+   border-radius: 20px;
 }
-.riotGame {
-   color: brown;
+.contentContainer {
+   height: 90vh;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
 }
+/**********  **********/
 
-.link {
+/* Navbar */
+.navbar {
+   font-family: "Orbitron", sans-serif;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 1rem;
+   height: 10vh;
+   width: 100%;
+   border-bottom: 0.5px solid rgba(105, 72, 170, 1);
+   box-shadow: 0 0 10rem rgba(255, 255, 255, 0.1);
+   background: linear-gradient(90deg, #1a112f 27.6%, rgba(40, 27, 71, 0) 100%);
+   color: white;
    text-decoration: none;
-   color: var(--color-separate);
+   z-index: 100;
 }
-
-.custom-toggler.navbar-toggler {
-   border-color: transparent;
-}
-.custom-toggler .navbar-toggler-icon {
-   background-image: url(
-"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-/* button */
-.btn {
-   background-color: var(--color-button)!important;
+/* .navbarLogo {
+   font-size: 30px;
+   font-weight: bold;
+} */
+/* .navbarItem {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   text-decoration: none;
+   gap: 20px;
+   font-size: 20px;
+} */
+.navbar a {
+   text-decoration: none;
    color: white;
-   border: none;
-   border-radius: 0.5em;
+}
+.navbarLink {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   text-decoration: none;
+   gap: 20px;
+   font-size: 20px;
+}
+.navbar-collapse {
+   width: 100vw;
+   background: linear-gradient(
+      90deg,
+      #1a112f 27.6%,
+      rgba(40, 27, 71, 0) 100%
+   ) !important;
+}
 
-   font-size: 1.2em;
-   font-weight: 600;
+.dropdown-menu {
+   background: linear-gradient(
+      90deg,
+      #1a112f 27.6%,
+      rgba(40, 27, 71, 0) 100%
+   ) !important;
+}
+/* FIN Navbar */
+
+/* Page accueil */
+.mainContainer {
+   width: 100vw;
+   height: 90vh;
+   display: flex;
+   justify-content: space-around;
+}
+
+.windowBlur {
+   background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+   );
+   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+   backdrop-filter: blur(5px);
+   border-radius: 20px;
+}
+
+.homeContent {
+   width: 75%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.title {
+   font-family: "Orbitron", sans-serif;
+   color: white;
+   text-align: center;
+}
+.homeTextContainer {
+   text-align: center;
+   height: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+.homeText {
+   font-family: "Orbitron", sans-serif;
+   color: white;
+   text-align: center;
+   width: 80%;
+}
+
+.homeText a {
+   color: #ed394f;
+   text-decoration: none;
+}
+.homeText a:hover {
+   color: #f91c36;
+}
+.homeText a:active {
+   color: rgb(255, 0, 0);
+}
+.rankVisual {
+   /* width: 20%;
+   height: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center; */
+   height: 100px;
+   /* margin: 30px; */
+}
+
+.allRankVisual {
+   background-image: url(/public/assets/img/rankMobile.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 100%;
+   /* width: 90%; */
+
+}
+/* FIN page acceuil */
+
+/* form Inscription */
+
+.formContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   height: 500px;
+}
+h1 {
+   color: white;
+   font-size: 30px;
+   font-family: "Orbitron", sans-serif;
+}
+form {
+   display: flex;
+   flex-direction: column;
+   /* justify-content: space-evenly; */
+   color: white;
+   width: 55%;
+   height: 100%;
+}
+.labelsInputsContainer {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+}
+.labelsInputs {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   height: 25px;
+   width: 100%;
+   font-family: "Orbitron", sans-serif;
+}
+
+.labelsInputs input {
+   width: 300px;
+   height: 100%;
+   border-radius: 10px;
+   border: 1px solid rgba(74, 0, 232, 1);
+   background-color: white;
+   color: black;
+   font-family: "Orbitron", sans-serif;
+   font-size: 15px;
+   outline: none;
+   padding: 15px;
+}
+
+.centerButton {
+   display: flex;
+   justify-content: center;
+   margin-top: 10px;
+}
+
+form button {
+   width: 150px;
+   height: 40px;
+   border-radius: 10px;
+   border: 1px solid rgba(74, 0, 232, 1);
+   background-color: rgba(74, 0, 232, 1);
+   color: white;
+   font-family: "Orbitron", sans-serif;
+   font-size: 15px;
+   outline: none;
    cursor: pointer;
-   transition: all 0.3s ease;
 }
-.btn:hover {
-   background-color: var(--color-button-hover)!important;
+
+form button:hover {
+   background-color: rgba(74, 0, 232, 0.8);
 }
-.btn:active {
-   background-color: var(--color-button-active)!important;
+
+form button:active {
+   background-color: rgba(74, 0, 232, 0.6);
+}
+
+/* FIN form Inscription */
+
+/* Form connexion */
+.connexionForm {
+   display: flex;
+   flex-direction: column;
+   color: white;
+   width: 40%;
+   height: 100%;
+}
+/* FIN form connexion */
+/* ERROR MESSAGE */
+.error {
+   color: red;
+   font-size: 15px;
+   font-family: "Orbitron", sans-serif;
+}
+
+/* FOOTER */
+footer {
+   width: 100%;
+   height: 10vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #1a112f;
+   color: white;
+   font-family: "Orbitron", sans-serif;
+   font-size: 15px;
+}
+
+/* media query desktop */
+@media screen and (min-width: 1024px) {
+   .homeText {
+      font-size: 20px;
+   }
+   .title {
+      font-size: 40px;
+   }
+   .homeContent {
+      height: 80%;
+
+   }
+   .rankVisual {
+      width: 20%;
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .allRankVisual {
+      background-image: url(/public/assets/img/rankDesktop.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 90%;
+      height: 90%;
+   }
+   .formContainer {
+      height: 600px;
+   }
+   .labelsInputsContainer {
+      height: 80%;
+   }
+   .labelsInputs {
+      height: 30px;
+   }
+   .labelsInputs input {
+      width: 400px;
+   }
+   .connexionForm {
+      width: 30%;
+   }
+   .error {
+      font-size: 20px;
+   }
 }

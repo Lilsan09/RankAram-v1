@@ -7,7 +7,7 @@ if (SessionFlash::exist()) {
    </div>
 
 <?php } ?>
-<form class="connexionForm container-fluid d-flex align-items-center justify-content-center text-dark" method="POST">
+<form class="bgGlobal container-fluid d-flex align-items-center justify-content-center text-light" method="POST">
    <fieldset class="row justify-content-center glassForm">
       <legend class="text-center mt-4">Veuillez saisir votre adresse Email</legend>
       <p><?= $errors['connexion'] ?? '' ;?></p>
@@ -15,7 +15,7 @@ if (SessionFlash::exist()) {
          <label for="email" class="form-label">Adresse Mail</label>
          <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="exemple@mail.com" pattern="<?= REGEX_EMAIL ?>">
       </div>
-      <button type="submit" class="btn btn-primary col-8 col-lg-3 m-4 bg-light text-dark">Envoyer</button>
-      <p class="createAcc text-black">Vous n'avez pas de compte ?<a class="createAcc text-decoration-none" href="../controllers/inscriptionCtrl.php"><span class="dtailing"> Créer un compte</span></a> maintenant !</p>
+      <button type="submit" class="btn col-8 col-lg-3 m-4 text-light">Envoyer</button>
+      <p class="createAcc text-light text-center">Vous n'avez pas de compte ?<a class="createAcc text-decoration-none" href="../controllers/inscriptionCtrl.php"><span class="dtailing"> Créer un compte</span></a> maintenant !</p>
    </fieldset>
 </form>

@@ -1,17 +1,23 @@
-<section class="bgGlobal">
-   <main class="home">
-      <div class="container-fluid">
-         <div class="row justify-content-center">
-            <div class="col-md-10 p-3">
-               <h1 class="py-5 mt-5 homeH1  text-white orbitron">Bienvenue sur Rank Aram</h1>
+<main>
+   <div class="home container-fluid">
+      <div class="mainContainer row align-content-center align-items-center">
+         <div class="col-11 col-lg-8 my-3 mt-md-0 py-4 windowBlur justify-content-lg-evenly justify-content-center homeContent">
+            <h1 class="title">Bienvenue sur Rank-Aram</h1>
+            <div class="homeTextContainer d-flex align-items-center justify-content-center">
+               <p class="homeText">
+                  Inscrit toi vite et <a href="">lie ton compte Riot Game</a> pour commencer
+                  à grind le ladder, et devenir le plus légendaire des
+                  joueurs d'ARAM !
+               </p>
+               <p class="homeText">
+                  Si tu est déjà inscrit, alors connecte toi <a href="/controllers/">ici</a> pour suivre
+                  ton évolution
+               </p>
             </div>
          </div>
-         <div class="row justify-content-center">
-            <div class="col-md-10 col-10">
-               <p class="p-2 text-white orbitron">Inscrit toi vite et lie ton compte <span class="riotGame">Riot Game</span> pour commencer à grind le ladder, et devenir le plus légendaire des joueurs d'ARAM !</p>
-               <p class="p-2 text-white orbitron">Si tu est déjà inscrit, alors connecte toi <span class="link"><a class="link text-decoration-none" href="/controllers/connexionCtrl.php">ici</a></span> pour suivre ton évolution</p>
-            </div>
+         <div class="windowBlur rankVisual col-11 col-lg-2">
+            <div class="allRankVisual"></div>
          </div>
       </div>
-   </main>
-</section>
+   </div>
+</main>
