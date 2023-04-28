@@ -7,13 +7,14 @@ if (SessionFlash::exist()) {
    </div>
 
 <?php } ?>
-<form class="contentContainer container-fluid d-flex align-items-center justify-content-center text-white" action="/controllers/connexionCtrl.php" method="post">
+<form class="contentContainer container-fluid d-flex align-items-center justify-content-center text-white" action="/controllers/changePasswordCtrl.php" method="POST">
    <fieldset class="row flex-column gap-5">
       <h1 class="text-white text-center">Nouveau mot de passe</h1>
       <div class="labelsInputsContainer gap-5 d-flex flex-wrap flex-column h-100 align-items-center">
          <div class="form-group labelsInputs d-flex flex-wrap flex-column col-10 col-lg-8 orbitron">
             <label class="m-2 w-100" for="password">Nouveau mot de passe</label>
             <input class="p-2 w-100" name="password" type="password" id="password" placeholder="******" required>
+            <input type="hidden" name="token" value="<?php if(isset($_GET['token'])){echo $_GET['token'];}?>">
          </div>
          <div class="form-group labelsInputs d-flex flex-wrap flex-column col-10 col-lg-8 orbitron">
             <label class="m-2 w-100" for="confirmPassword">Confirmez le nouveau mot de passe</label>
