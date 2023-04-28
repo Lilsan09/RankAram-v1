@@ -1,21 +1,27 @@
 <?php
 if (SessionFlash::exist()) {
 ?>
-   <div class="alert alert-dark alert-dismissible fade show text-light" role="alert">
+   <div class="alert alert-dismissible fade show text-white" role="alert">
       <strong><?= SessionFlash::get() ?></strong>
-      <button type="button" class="btn-close closeAlertBtn" data-bs-dismiss="alert" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white closeAlertBtn" data-bs-dismiss="alert" aria-label="Close"></button>
    </div>
-
 <?php } ?>
-<form class="bgGlobal container-fluid d-flex align-items-center justify-content-center text-light" method="POST">
-   <fieldset class="row justify-content-center glassForm">
-      <legend class="text-center mt-4">Veuillez saisir votre adresse Email</legend>
-      <p><?= $errors['connexion'] ?? '' ;?></p>
-      <div class="form-group col-lg-10 m-3">
-         <label for="email" class="form-label">Adresse Mail</label>
-         <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="exemple@mail.com" pattern="<?= REGEX_EMAIL ?>">
+
+<form class="contentContainer container-fluid d-flex align-items-center justify-content-center text-white" method="post">
+   <fieldset class="row flex-column gap-5">
+      <h1 class="text-white text-center">Mot de passe oublié</h1>
+      <div class="labelsInputsContainer gap-5 d-flex flex-wrap flex-column h-100 align-items-center">
+         <div class="form-group labelsInputs d-flex flex-column col-10 col-lg-8 orbitron">
+            <label class="m-2 w-100" for="email">Adresse e-mail :</label>
+            <input class="p-2 w-100" value="<?= $email ?? '' ?>" name="email" type="email" id="mail" aria-describedby="emailHelp" placeholder="exemple@mail.com" pattern="<?= REGEX_EMAIL ?>" required>
+         </div>
       </div>
-      <button type="submit" class="btn col-8 col-lg-3 m-4 text-light">Envoyer</button>
-      <p class="createAcc text-light text-center">Vous n'avez pas de compte ?<a class="createAcc text-decoration-none" href="../controllers/inscriptionCtrl.php"><span class="dtailing"> Créer un compte</span></a> maintenant !</p>
+      <div class="centerButton d-flex justify-content-center">
+         <button type="submit">Envoyer</button>
+         <div class="error">
+            <p><?= $errors ?? ''; ?></p>
+         </div>
+      </div>
+      <p class="text-center orbitron text">Vous n'êtes pas inscrit? <br> Alors inscrivez vous <a class=" text-decoration-none" href="/controllers/inscriptionCtrl.php">ici</a> et commencez votre ascension maintenant !</p>
    </fieldset>
 </form>

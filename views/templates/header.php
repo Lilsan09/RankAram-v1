@@ -19,7 +19,7 @@
          <!-- NAVBAR -->
          <nav class="navbar navbar-dark navbar-expand-lg orbitron">
             <div class="container-fluid p-2">
-               <a class="navbar-brand rankAramColor" href="/controllers/homeCtrl.php">Rank Aram
+               <a class="mx-3 navbar-brand rankAramColor" href="/controllers/homeCtrl.php">Rank Aram
                   <span class="visually-hidden">(current)</span>
                </a>
                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">

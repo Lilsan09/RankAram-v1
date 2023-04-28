@@ -1,25 +1,30 @@
 <?php
 if (SessionFlash::exist()) {
 ?>
-   <div class="alert alert-dark alert-dismissible fade show text-light" role="alert">
+   <div class="alert text-white" role="alert">
       <strong><?= SessionFlash::get() ?></strong>
-      <button type="button" class="btn-close closeAlertBtn" data-bs-dismiss="alert" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white closeAlertBtn" data-bs-dismiss="alert" aria-label="Close"></button>
    </div>
 
 <?php } ?>
-<form class="bgGlobal container-fluid d-flex align-items-center justify-content-center text-light" method="POST">
-   <fieldset class="row justify-content-center">
-      <legend class="text-center mt-4">Changez votre mot de passe</legend>
-      <p><?= $errors['connexion'] ?? '' ;?></p>
-      <div class="form-group col-lg-10 m3">
-         <label for="password" class="form-label">Nouveau mot de passe</label>
-         <input name="password" type="password" class="form-control" id="password" placeholder="******">
+<form class="contentContainer container-fluid d-flex align-items-center justify-content-center text-white" action="/controllers/connexionCtrl.php" method="post">
+   <fieldset class="row flex-column gap-5">
+      <h1 class="text-white text-center">Nouveau mot de passe</h1>
+      <div class="labelsInputsContainer gap-5 d-flex flex-wrap flex-column h-100 align-items-center">
+         <div class="form-group labelsInputs d-flex flex-wrap flex-column col-10 col-lg-8 orbitron">
+            <label class="m-2 w-100" for="password">Nouveau mot de passe</label>
+            <input class="p-2 w-100" name="password" type="password" id="password" placeholder="******" required>
+         </div>
+         <div class="form-group labelsInputs d-flex flex-wrap flex-column col-10 col-lg-8 orbitron">
+            <label class="m-2 w-100" for="confirmPassword">Confirmez le nouveau mot de passe</label>
+            <input class="p-2 w-100" name="confirmPassword" type="password" id="password" placeholder="******" required>
+         </div>
       </div>
-      <div class="form-group col-lg-10 m-3">
-         <label for="confirmPassword" class="form-label">Confirmez le nouveau mot de passe</label>
-         <input name="confirmPassword" type="password" class="form-control" id="confirmPassword" placeholder="******">
+      <div class="centerButton d-flex justify-content-center">
+         <button type="submit">Envoyer</button>
+         <div class="error">
+            <p><?= $errors ?? ''; ?></p>
+         </div>
       </div>
-      <button type="submit" class="btn col-8 col-lg-3 m-4 text-light">Changer le mot de passe</button>
-      <!-- <p class="createAcc text-black">Vous n'avez pas de compte ?<a class="createAcc text-decoration-none" href="../controllers/inscriptionCtrl.php"><span class="dtailing"> Créer un compte</span></a> maintenant !</p> -->
    </fieldset>
 </form>

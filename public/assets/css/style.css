@@ -33,7 +33,7 @@
          rgba(0, 0, 0, 0) 100%
       ),
       linear-gradient(0deg, rgba(26, 17, 47, 0.7), rgba(26, 17, 47, 0.7)),
-      url(/public/assets/img/rankAramBg.jpg);
+      url(/public/assets/img/rankAramBgMobil.jpg);
    background-color: rgba(27, 21, 41, 1);
    background-size: cover;
    background-repeat: no-repeat;
@@ -54,6 +54,9 @@
    justify-content: center;
    flex-direction: column;
 }
+.orbitron {
+   font-family: "Orbitron", sans-serif;
+}
 /**********  **********/
 
 /* Navbar */
@@ -73,18 +76,6 @@
    text-decoration: none;
    z-index: 100;
 }
-/* .navbarLogo {
-   font-size: 30px;
-   font-weight: bold;
-} */
-/* .navbarItem {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   text-decoration: none;
-   gap: 20px;
-   font-size: 20px;
-} */
 .navbar a {
    text-decoration: none;
    color: white;
@@ -171,13 +162,7 @@
    color: rgb(255, 0, 0);
 }
 .rankVisual {
-   /* width: 20%;
-   height: 80%;
-   display: flex;
-   justify-content: center;
-   align-items: center; */
    height: 100px;
-   /* margin: 30px; */
 }
 
 .allRankVisual {
@@ -186,34 +171,32 @@
    background-repeat: no-repeat;
    background-position: center;
    height: 100%;
-   /* width: 90%; */
-
 }
 /* FIN page acceuil */
 
 /* form Inscription */
 
-.formContainer {
+/* .formContainer {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: space-evenly;
    height: 500px;
-}
+} */
 h1 {
    color: white;
    font-size: 30px;
    font-family: "Orbitron", sans-serif;
 }
-form {
+/* form {
    display: flex;
    flex-direction: column;
-   /* justify-content: space-evenly; */
+   justify-content: space-evenly;
    color: white;
    width: 55%;
    height: 100%;
-}
-.labelsInputsContainer {
+} */
+/* .labelsInputsContainer {
    display: flex;
    flex-wrap: wrap;
    flex-direction: column;
@@ -221,8 +204,8 @@ form {
    align-items: center;
    height: 100%;
    width: 100%;
-}
-.labelsInputs {
+} */
+/* .labelsInputs {
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
@@ -231,26 +214,21 @@ form {
    height: 25px;
    width: 100%;
    font-family: "Orbitron", sans-serif;
-}
-
+} */
 .labelsInputs input {
-   width: 300px;
-   height: 100%;
    border-radius: 10px;
    border: 1px solid rgba(74, 0, 232, 1);
-   background-color: white;
    color: black;
-   font-family: "Orbitron", sans-serif;
    font-size: 15px;
    outline: none;
-   padding: 15px;
+   /* padding: 15px; */
 }
 
-.centerButton {
+/* .centerButton {
    display: flex;
    justify-content: center;
    margin-top: 10px;
-}
+} */
 
 form button {
    width: 150px;
@@ -276,13 +254,13 @@ form button:active {
 /* FIN form Inscription */
 
 /* Form connexion */
-.connexionForm {
+/* .connexionForm {
    display: flex;
    flex-direction: column;
    color: white;
    width: 40%;
    height: 100%;
-}
+} */
 /* FIN form connexion */
 /* ERROR MESSAGE */
 .error {
@@ -306,6 +284,18 @@ footer {
 
 /* media query desktop */
 @media screen and (min-width: 1024px) {
+   .globalBg {
+      background: linear-gradient(
+            114.58deg,
+            #000000 -20.68%,
+            rgba(0, 0, 0, 0) 100%
+         ),
+         linear-gradient(0deg, rgba(26, 17, 47, 0.7), rgba(26, 17, 47, 0.7)),
+         url(/public/assets/img/rankAramBg.jpg);
+      background-color: rgba(27, 21, 41, 1);
+      background-size: cover;
+      background-repeat: no-repeat;
+   }
    .homeText {
       font-size: 20px;
    }
@@ -329,21 +319,6 @@ footer {
       background-repeat: no-repeat;
       width: 90%;
       height: 90%;
-   }
-   .formContainer {
-      height: 600px;
-   }
-   .labelsInputsContainer {
-      height: 80%;
-   }
-   .labelsInputs {
-      height: 30px;
-   }
-   .labelsInputs input {
-      width: 400px;
-   }
-   .connexionForm {
-      width: 30%;
    }
    .error {
       font-size: 20px;

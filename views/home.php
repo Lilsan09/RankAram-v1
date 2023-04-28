@@ -1,3 +1,12 @@
+<?php
+if (SessionFlash::exist()) {
+?>
+   <div class="alert alert-dismissible fade show text-white" role="alert">
+      <strong><?= SessionFlash::get() ?></strong>
+      <button type="button" class="btn-close btn-close-white closeAlertBtn" data-bs-dismiss="alert" aria-label="Close"></button>
+   </div>
+<?php } ?>
+
 <main>
    <div class="home container-fluid">
       <div class="mainContainer row align-content-center align-items-center">
