@@ -20,10 +20,18 @@ if (SessionFlash::exist()) {
             <input class="p-2 w-100" name="password" type="password" id="password" placeholder="******" required>
          </div>
       </div>
-      <div class="centerButton d-flex justify-content-center">
+      <div class="centerButton d-flex flex-column justify-content-center align-items-center">
          <button type="submit">Se connecter</button>
          <div class="error">
-            <p><?= $errors ?? ''; ?></p>
+            <p>
+               <?php
+               if(isset($errors)): 
+                  foreach($errors as $error):
+                     echo $error ?? '';
+                  endforeach;
+               endif;
+               ?>
+            </p>
          </div>
       </div>
       <p class="text-center orbitron text"><a class=" text-decoration-none" href="/controllers/forgetPasswordCtrl.php">Mot de passe oublier</a></p>

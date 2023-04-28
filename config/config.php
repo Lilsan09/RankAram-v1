@@ -15,12 +15,11 @@ define('REGEX_NO_NUMBER', '^[A-Za-zéèêëàâäôöûüç\' ]+$');
 // regex pour les noms d'utilisateur
 define('REGEX_USERNAME', '^[A-Za-zéèêëàâäôöûüç\' ]+$');
 
-
 // BASE DE DONNEES
-define('DSN', 'mysql:host=localhost;dbname=rankAram;charset=utf8;port=3306');
+define('DSN', 'mysql:host=localhost;dbname=rankaram;charset=utf8;port=3306');
 
-define('USER', 'admin');
-define('PWD', 'admin');
+define('USER', 'root');
+define('PWD', '');
 
 define('SITE_NAME', 'RankAram');
 define('EMAIL', 'rankaram@gmail.com');

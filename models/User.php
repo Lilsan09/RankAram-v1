@@ -6,6 +6,7 @@ require_once(__DIR__ . './../helpers/JWT.php');
 // creation de la class User
 class User
 {
+
    // creation des attributs
    private $pdo;
    private $id;
@@ -154,7 +155,7 @@ class User
    // Methode pour afficher les information de l'utilisateur
       public static function getUserById($id)
       {
-         $sth = Database::getInstance()->prepare('SELECT * FROM `users` WHERE `id` = :id');
+         $sth = Database::getInstance()->prepare('SELECT * FROM `users` WHERE `id_users` = :id');
          $sth->bindValue(':id', $id, PDO::PARAM_INT);
          if ($sth->execute()) {
             $result = $sth->fetch(PDO::FETCH_OBJ);
@@ -191,7 +192,7 @@ class User
    // Methode pour modifier un mot de passe
       public static function modifyPassword($id, $password)
       {
-         $sth = Database::getInstance()->prepare('UPDATE `users` SET `password` = :password WHERE `Id_users` = :id');
+         $sth = Database::getInstance()->prepare('UPDATE `users` SET `password` = :password WHERE `id_users` = :id');
          $sth->bindValue(':id', $id, PDO::PARAM_INT);
          $sth->bindValue(':password', $password, PDO::PARAM_STR);
          if ($sth->execute()) {
